@@ -1,0 +1,16 @@
+protocolo EasiCash servidor:
+1. BIOS:
+aways power on
+2. Install ubuntu server:
+via Kernel
+nome de usuario: inwave
+nome do servidor: easibox
+conta: inwave
+senha: eb[MAC] (somente numeros)
+
+3. PuTTY:
+wget https://d2tjwffk8hi2j5.cloudfront.net/downloads/easicash/easibox-deployer-v1.1.6-master-17.tar.gz
+tar -xzvf easibox-deployer-v1.1.6-master-17.tar.gz
+cd easibox-deployer
+./install.sh
+sudo shutdown now

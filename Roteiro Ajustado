@@ -1,0 +1,22 @@
+Short 1: Introdução a Integrais [Roteiro Ajustado]
+Texto na tela: "O que é uma Integral?"
+
+Narrador (com ritmo):
+"Hoje você vai aprender o que é uma integral.
+Ela representa a soma contínua de pequenas áreas sob uma curva. É uma forma de calcular a área total de algo de maneira contínua."
+
+"Agora, uma parte importante: a notação.
+'a' é o ponto inicial, 'b' é o ponto final, 'f(x)' é a função que estamos integrando, e 'F(x)' é a primitiva — a função que obtemos após integrar."
+
+"Se derivamos uma integral, obtemos de volta a função original. Isso é o que chamamos de Teorema Fundamental do Cálculo. Parece simples, mas é uma ideia poderosa."
+
+"As propriedades da integral também são importantes. Você pode inverter os limites de integração, somar integrais de funções, e tirar a constante 'c' quando necessário."
+
+"Se 'f(x)' for constante, a integral entre 'a' e 'b' será simplesmente o valor de 'f' multiplicado por 'b menos a'."
+
+"Algumas propriedades mais avançadas resolvem casos específicos, mas não vamos entrar nesses detalhes agora. O importante é entender a base."
+
+"Por fim, mudamos a notação para um 'x' genérico quando tratamos de integrais indefinidas. Quando resolvemos, obtemos a primitiva, e a constante 'c' se ajusta conforme necessário."
+
+Texto na tela: "Curtiu? Fique para o próximo!"
+

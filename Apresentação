@@ -1,0 +1,141 @@
+Short 1: Introdução a Integrais
+[Roteiro]
+
+Texto na tela: "O que é uma Integral?"
+
+Narrador (com ritmo):
+"Hoje você vai aprender o que é uma integral.
+É a soma contínua de áreas sob a curva, no total.
+Uma ideia intuitiva, veja a área total,
+O conceito é claro, é fenomenal!"
+
+"Agora nessa parte, presta atenção,
+Você não vai querer errar na notação.
+'a' é onde começa, 'b' é onde termina,
+'fzinho' é a função, 'Fzão' é a primitiva.
+"
+
+"Outra coisa importante, fundamental,
+Se voce deriva uma integral,
+Obtem a funcao original.
+Parece simples, mas não é trivial!"
+
+
+"As propriedades da integral, você deve saber,
+O que pode ou não pode fazer.
+Você pode inverter, pode até somar,
+Constantemente, 'c' pode sair pra simplificar."
+
+"Se 'f' é constante, 'b' menos 'a'"
+
+"Algumas propriedades são um pouco estranhas,
+Resolvem casos nicho, mas valem a pena.
+Não é o foco agora, então vamos seguir,
+Pra entender melhor, sem se confundir."
+
+"Agora mudamos a notação,
+Por um 'x' nessa equação.
+Ao resolver, vemos a primitiva,
+'F' de 'a' vira constante,
+Integral indefinida, uma ideia brilhante!"
+
+Texto na tela: "Curtiu? Fique para o próximo!"
+
+Short 2: Integração por Substituição
+[Roteiro]
+
+Texto na tela: "Integração por Substituição!"
+"Derivar é metodo, integrar é arte"
+
+Narrador (com ritmo):
+"Hoje eu vou te ensinar,
+Esse método de integração,
+Veja só, meu jovem padawan,
+Integrar exige intuição."
+
+"Quando temos uma função,
+E uma simplificação vem na visão,
+Procure logo pela derivada,
+É o truque dessa jogada!"
+
+"Mas cuidado, preste atenção,
+'a' e 'b' podem mudar na operação,
+Transformamos a integral em algo novo,
+E o resultado vem, sem estresse ou choro.
+
+"Agora veja o truque,
+Em uma integral indefinida:
+Localizamos, derivamos,
+Simplificamos e substituímos,
+Integramos, des-substituímos!"
+
+"Não esqueça de substituir 'u' por 'x',
+Se não, na prova, voce vai errar,
+E um dez não vai conseguir tirar!"
+
+Texto na tela: "Próximo: Integração por Partes!"
+
+Short 3: Integração por Partes
+[Roteiro]
+
+Texto na tela: "Integração por Partes: Vamos lá!"
+
+Narrador (com ritmo):
+
+"Se tem dois fatores e quer integrar,
+Integração por partes você vai usar!
+A fórmula pode até ser esquisita,
+Mas vem da integração, quando temos um produto.
+Se quiser ver, pausa agora e tente entender,
+Integral de 'udv' é 'uv' menos integral de 'vdu', pode crer!"
+
+"Escolhemos o 'u', escolhemos o 'dv',
+Anote no papel, não deixe esquecer!
+Deriva o 'u', integra o 'dv',
+Depois substituímos na fórmula, você vai ver."
+
+"'uv' menos 'vdu' é o que você faz,
+Às vezes perguntam como escolher,
+Eu digo: leia o enunciado e deixe acontecer."
+
+"Mas cuidado, devo avisar,
+Esse método, se usado errado, pode complicar!
+Prefira derivar logaritmos e trigonométricas inversas,
+E integre exponenciais e funções trigonométricas dispersas."
+
+"Faz o produto e a subtração,
+Com 'uv' menos integral de 'vdu', irmão!
+Tá confuso? Vou te lembrar:
+Com prática e treino, você vai arrasar!"
+
+"Um truque simples que vai te ajudar,
+Em integrações complexas você vai mandar!
+Gostou do macete? Então compartilhe,
+Vem com a gente, mais truques, se prepare!"
+
+Texto na tela: "Próximo: Frações Parciais!"
+
+Short 4: Frações Parciais
+[Roteiro]
+
+Texto na tela: "Integração por Frações Parciais"
+
+Narrador (com ritmo):
+"Chegou a hora das frações parciais,
+Se a função racional: Esse método é demais."
+
+"Divide o problema, quebra em pedaços,
+Cada fração é simples, não tem embaraços.
+Voce pode resolve um sistema de equações linear
+Mas calma um jeito mais simples vou te ensinar"
+
+"Decompõe, integra, é como brincar,
+Cada pedacinho é fácil de calcular."
+
+"Frações parciais fazem a vida melhorar,
+Simplifica a fração, e você vai arrasar!
+Mas cuidado, isso ainda vai alem,
+assim com tudo na vida, pode ficar mais complicado,
+Nesse caso não tem truque, só senta a bunda e resolve o sistema"
+
+Texto na tela: "E aí, gostou? Segue a gente para mais dicas de cálculo!"
