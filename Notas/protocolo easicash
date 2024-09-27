@@ -13,4 +13,39 @@ wget https://d2tjwffk8hi2j5.cloudfront.net/downloads/easicash/easibox-deployer-v
 tar -xzvf easibox-deployer-v1.1.6-master-17.tar.gz
 cd easibox-deployer
 ./install.sh
+ebfc5cee4d0c53
+
+eb745d22ea2f19
+
+eb60c72703d
+
+ebfc5cee4d0
+
+eb745d22ea2f19
+
+ebfc5cee4d0342
+ebd8cb8ad75ee3
+
 sudo shutdown now
+
+Protocolo EasiCash servidor 2:
+1. Atravez do IP da camera:
+- Mudar o nome
+- Mudar a data
+- PoE? desabilitar analogicas; desabilitar PoE
+- Desmarcar canal 0
+- Formatar HD
+2. PUTTY - Instalador:
+- desativar overlay
+- adicionar licensa e certificado
+- Start full build instalation
+- Modificar IP
+
+20:00
+12:00
+21:00
+20:00
+27:00
+17:00
+18:00
+9 - 1 - 70

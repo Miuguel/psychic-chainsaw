@@ -5,7 +5,7 @@
     SendEvent, {Text}admin ; 
     return
 ^!e:: ; Este é o atalho para Ctrl + Alt + E
-    SendEvent, {Text}ebMAC ; 
+    SendEvent, {Text}eb745d22ea2f1f ; 
     return
 contador := 0
 ^!p::

@@ -1,41 +1,50 @@
 import requests
 from bs4 import BeautifulSoup
-import csv
 
-# URL da página oficial dos vencedores do IG Nobel
-url = "https://www.improbable.com/ig/winners/"
+# URL da página da Wikipedia com a lista dos ganhadores do Ig Nobel
+url = 'https://en.wikipedia.org/wiki/List_of_Ig_Nobel_Prize_winners'
 
-# Fazer uma requisição para a página
+# Fazendo a requisição HTTP para obter o conteúdo HTML da página
 response = requests.get(url)
 
-# Verificar se a requisição foi bem-sucedida
-if response.status_code == 200:
-    # Analisar o conteúdo HTML da página
-    soup = BeautifulSoup(response.content, "html.parser")
+# Parsing do conteúdo HTML com BeautifulSoup
+soup = BeautifulSoup(response.text, 'html.parser')
 
-    # Criar uma lista para armazenar os dados dos ganhadores
-    winners_data = []
+# Encontrando os anos que estão em mw-heading mw-heading2
+anos = soup.find_all('span', {'class': 'mw-headline'})
 
-    # Encontrar todos os blocos que contêm informações sobre os vencedores (ajustar com base na inspeção do HTML)
-    winners = soup.find_all("div", class_="ig-winners-list")
+# Inicializando uma lista para armazenar os dados
+ganhadores = []
 
-    for winner in winners:
-        year = winner.find("h2").text.strip()  # Encontrar o ano
-        categories = winner.find_all("h3")  # Encontrar as categorias
+# Iterando pelos anos e extraindo as informações
+for ano in anos:
+    # Extraindo o texto do ano
+    ano_texto = ano.text
 
-        for category in categories:
-            category_name = category.text.strip()
-            winner_info = category.find_next("p").text.strip()  # Detalhes do vencedor
+    # Encontrando o próximo elemento que é a lista de prêmios (<ul>)
+    ul_element = ano.find_next('ul')
 
-            # Armazenar os dados em uma lista
-            winners_data.append([year, category_name, winner_info])
+    # Iterando pelos itens da lista (cada <li> contém informações de um ganhador)
+    if ul_element:
+        for li in ul_element.find_all('li'):
+            # Tema do ganhador está em <b> dentro de <ul>
+            tema_element = li.find('b')
+            tema = tema_element.text if tema_element else "Tema não encontrado"
 
-    # Salvar os dados em um arquivo CSV
-    with open("ig_nobel_winners.csv", "w", newline="", encoding="utf-8") as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(["Ano", "Categoria", "Informação do Vencedor"])
-        writer.writerows(winners_data)
+            # Texto do ganhador está em <a>
+            ganhador_element = li.find('a')
+            ganhador = ganhador_element.text if ganhador_element else "Ganhador não encontrado"
 
-    print("Raspagem concluída e dados salvos no arquivo 'ig_nobel_winners.csv'.")
-else:
-    print(f"Erro ao acessar a página. Status code: {response.status_code}")
+            # Adicionando o resultado na lista
+            ganhadores.append({
+                'ano': ano_texto,
+                'tema': tema,
+                'ganhador': ganhador
+            })
+
+# Exibindo os resultados
+for ganhador in ganhadores:
+    print(f"Ano: {ganhador['ano']}")
+    print(f"Tema: {ganhador['tema']}")
+    print(f"Ganhador: {ganhador['ganhador']}")
+    print("-" * 40)
