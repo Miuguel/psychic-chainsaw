@@ -13,22 +13,27 @@ wget https://d2tjwffk8hi2j5.cloudfront.net/downloads/easicash/easibox-deployer-v
 tar -xzvf easibox-deployer-v1.1.6-master-17.tar.gz
 cd easibox-deployer
 ./install.sh
-ebfc5cee4d0c53
 
-eb745d22ea2f19
+74-5D-22-EA-26-2D
+FC-5C-EE-4D-03-2E
 
-eb60c72703d
+eb745d22ea262d
+ebfc5cee4d032e
+
+eb60c72703d 
 
 ebfc5cee4d0
 
-eb745d22ea2f19
+eb745d22ea2
 
-ebfc5cee4d0342
-ebd8cb8ad75ee3
+ebd8cb8ad75
+10.146.51.22
+10.145.51.23
+10.145.51.2
 
 sudo shutdown now
 
-Protocolo EasiCash servidor 2:
+Protocolo EasiCash servidor (continuação):
 1. Atravez do IP da camera:
 - Mudar o nome
 - Mudar a data
@@ -37,15 +42,25 @@ Protocolo EasiCash servidor 2:
 - Formatar HD
 2. PUTTY - Instalador:
 - desativar overlay
-- adicionar licensa e certificado
+- adicionar :
+	Certificado CA
+	Certificado CERT
+	Certificado KEY
+	Certificado Remote
+- Licensa
+- adicionar dvr
 - Start full build instalation
-- Modificar IP
+- Modificar IP, mask, gateway, DNS
+- Evidencias:
+	DNS 
+	Cloud DVR (QR Code)
+	TCP 
+	IP 
+	Imagem da camera (com horário)
+10.146.51.22
+10.146.51.23
 
-20:00
-12:00
-21:00
-20:00
-27:00
-17:00
-18:00
-9 - 1 - 70
+10.1.146
+255.255.255.0
+8.8.8.8
+8.8.4.4

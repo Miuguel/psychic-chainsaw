@@ -3,43 +3,13 @@ Short 1: Introdução a Integrais
 
 Texto na tela: "O que é uma Integral?"
 
-Narrador (com ritmo):
-"Hoje você vai aprender o que é uma integral.
-É a soma contínua de áreas sob a curva, no total.
-Uma ideia intuitiva, veja a área total,
-O conceito é claro, é fenomenal!"
+Narrador:
+O conceito de integral aparece no calculo quando queremos calcular a area sob o grafico de uma curva
+É interessante pensar como: o calculo da area de pequenos retangulos de largura dx que ficam infinitamente pequenos quanto mais aproximamos do valor real da função. Esse conceito é visto na Soma de Riemann, que é um somatorio de infinitesimais.
+E daí denotamos a notação que conhecemos de integral, onde o S representa a soma continua desses infinitesimais, a e b são os limites de integração, f de x é a função e dx é em relação a que estamos derivando (como se a direção que andamos).
+É interessante observar que essa função de tomar a area sob a curva de uma função é uma operação linear, portanto é possivel realizar certos truques como separar soma de integrais e passar valores constantes que estejam multiplicados dentro da função, para fora.
+Outra propriedade da operação da função integral, é que ela é inversa a operação de derivar, portanto, se denotarmos efezão a anti derivada de f, a integral calculada de um valor fixo, até um valor variavel, se torna efezão do valor variavel menos efezão do valor fixo, e é dessa forma então que definimos a integral indefinida de uma função.
 
-"Agora nessa parte, presta atenção,
-Você não vai querer errar na notação.
-'a' é onde começa, 'b' é onde termina,
-'fzinho' é a função, 'Fzão' é a primitiva.
-"
-
-"Outra coisa importante, fundamental,
-Se voce deriva uma integral,
-Obtem a funcao original.
-Parece simples, mas não é trivial!"
-
-
-"As propriedades da integral, você deve saber,
-O que pode ou não pode fazer.
-Você pode inverter, pode até somar,
-Constantemente, 'c' pode sair pra simplificar."
-
-"Se 'f' é constante, 'b' menos 'a'"
-
-"Algumas propriedades são um pouco estranhas,
-Resolvem casos nicho, mas valem a pena.
-Não é o foco agora, então vamos seguir,
-Pra entender melhor, sem se confundir."
-
-"Agora mudamos a notação,
-Por um 'x' nessa equação.
-Ao resolver, vemos a primitiva,
-'F' de 'a' vira constante,
-Integral indefinida, uma ideia brilhante!"
-
-Texto na tela: "Curtiu? Fique para o próximo!"
 
 Short 2: Integração por Substituição
 [Roteiro]
@@ -47,11 +17,8 @@ Short 2: Integração por Substituição
 Texto na tela: "Integração por Substituição!"
 "Derivar é metodo, integrar é arte"
 
-Narrador (com ritmo):
-"Hoje eu vou te ensinar,
-Esse método de integração,
-Veja só, meu jovem padawan,
-Integrar exige intuição."
+Narrador :
+Por exemplo:
 
 "Quando temos uma função,
 E uma simplificação vem na visão,
@@ -81,37 +48,17 @@ Short 3: Integração por Partes
 Texto na tela: "Integração por Partes: Vamos lá!"
 
 Narrador (com ritmo):
+Ao contrario da operação de derivar, integrar exige uma intuição, alguma coisa que indique o caminho que devemos tomar para excolher o metodo que vamos usar.
+Um exemplo claro disso é o metodo de derivação por partes, onde podemos resolver o problema, ou picotalo em pedaços menores e mais complexos.
+Mas o metodo é mais ou menos assim:
+Dado uma função que podemos separar em dois fatores.
+Primeiro, escolhemos um termo 'u' para derivar e um termo para integrar 'dv'. Derivamos o 'u' e integramos o 'dv'. Depois, é só substituir esses valores na fórmula."
+. A fórmula pode parecer um pouco estranha no início, mas ela vem da ideia de integrar um produto de funções. Se precisar de tempo, pause aqui para entender melhor, mas o que deve ficar gravado é: a integral de 'udv' é 'uv' menos a integral de 'vdu'.
 
-"Se tem dois fatores e quer integrar,
-Integração por partes você vai usar!
-A fórmula pode até ser esquisita,
-Mas vem da integração, quando temos um produto.
-Se quiser ver, pausa agora e tente entender,
-Integral de 'udv' é 'uv' menos integral de 'vdu', pode crer!"
+Quanto a escolher o que derivar ou integrar, você deve analisar ambas as funções, e ver o que faz mais sentido. Ou então considera o anagrama:
 
-"Escolhemos o 'u', escolhemos o 'dv',
-Anote no papel, não deixe esquecer!
-Deriva o 'u', integra o 'dv',
-Depois substituímos na fórmula, você vai ver."
-
-"'uv' menos 'vdu' é o que você faz,
-Às vezes perguntam como escolher,
-Eu digo: leia o enunciado e deixe acontecer."
-
-"Mas cuidado, devo avisar,
-Esse método, se usado errado, pode complicar!
-Prefira derivar logaritmos e trigonométricas inversas,
-E integre exponenciais e funções trigonométricas dispersas."
-
-"Faz o produto e a subtração,
-Com 'uv' menos integral de 'vdu', irmão!
-Tá confuso? Vou te lembrar:
-Com prática e treino, você vai arrasar!"
-
-"Um truque simples que vai te ajudar,
-Em integrações complexas você vai mandar!
-Gostou do macete? Então compartilhe,
-Vem com a gente, mais truques, se prepare!"
+Geralmente, derivamos logaritmos e funções trigonométricas inversas, enquanto integramos exponenciais e funções trigonométricas.
+Outro detalhe importante, se aplicar a Integração por Partes da forma errada, você pode complicar o problema ainda mais. 
 
 Texto na tela: "Próximo: Frações Parciais!"
 
