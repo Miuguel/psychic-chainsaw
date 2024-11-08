@@ -14,22 +14,29 @@ tar -xzvf easibox-deployer-v1.1.6-master-17.tar.gz
 cd easibox-deployer
 ./install.sh
 
-74-5D-22-EA-26-2D
-FC-5C-EE-4D-03-2E
 
-eb745d22ea262d
-ebfc5cee4d032e
+ebfc5cee4d047f
 
-eb60c72703d 
+eb745d22ea24f7
 
-ebfc5cee4d0
+74-5D-22-EA-24-F7
+FC-5C-EE-4D-04-7F
 
-eb745d22ea2
+eb60c7270ed72e
 
-ebd8cb8ad75
-10.146.51.22
-10.145.51.23
-10.145.51.2
+
+ebd8cb8ad75ee3
+
+10.255.135.198
+
+
+eb60c7270ed72e
+
+ebfc5cee4d047f
+
+eb745d22ea24f7
+
+ebd8cb8ad75ee3
 
 sudo shutdown now
 
@@ -53,14 +60,110 @@ Protocolo EasiCash servidor (continuação):
 - Modificar IP, mask, gateway, DNS
 - Evidencias:
 	DNS 
-	Cloud DVR (QR Code)
 	TCP 
 	IP 
 	Imagem da camera (com horário)
-10.146.51.22
-10.146.51.23
+	HD funcionando
 
-10.1.146
+Configuração do DVR
+PDV 00
+Stream Principal
+Tipo de vídeo: Vídeo e Áudio
+Resolução: 1280x720 (720P)
+Tipo bitrate: Variável
+Qualidade de vídeo: Médio
+Número de Imagens (FPS): 15 fps
+Taxa bits máx: 512 Kbps
+Codific. Vídeo: H.264
+H.264+: OFF (desativado)
+Intervalo de I-frames: 15
+
+Sub Stream
+Tipo de vídeo: Stream de vídeo
+Resolução: 704x576 (4CIF) ou 640x360
+Tipo bitrate: Variável
+Qualidade de vídeo: Mt. baixo
+Número de Imagens (FPS): 8 fps
+Taxa bits máx: 256 Kbps
+Codific. Vídeo: H.264
+H.264+: OFF (desativado)
+Intervalo de I-frames: 8
+
+Configuração de Áudio
+Codific. áudio: G.711ulaw
+Entr. áudio: Lineln
+Volume de entrada: entre 50 e 60.
+Filtro ruído: OFF (Desativado)
+
+Eventos
+Desabilitar todas as opçãos e Remover Tudo.
+
+192.168.1.1
 255.255.255.0
 8.8.8.8
 8.8.4.4
+10.0.028.60 10.0.28.60
+10.0.28.64
+10.0.28.60
+10.0.28.91
+
+A mascara de subnet divide a rede em duas, de forma que uma parte só tem acesso a outra se for por meio de um roteador.
+Aparentemente só se pode acessar o DVR se a mascara de subnet estiver igual, eu me pergunto se isso tambem tem a ver com o servidor
+Sempre divide a quantidade de cameras totais pelo dvr dos pedidos e o resto fica para os ultimos dvr
+mudar os dvr
+
+sudo ifconfig eth0 10.1.13.140 netmask 255.255.255.0
+
+sudo ip addr add 10.1.13.140/24 dev eth0
+
+
+curl -I https://www.google.com
+
+sudo ip route add default via 10.1.13.254
+
+sudo ip link set eno1 up
+
+sudo ip addr add 10.1.13.140/25 dev eno1
+
+sudo ip addr flush dev eno1
+
+sudo nano /etc/network/interfaces
+
+ip route show
+sudo dhclient eno1
+
+sudo dhclient -r eno1
+sudo dhclient eno1
+
+ping 10.173.0.37
+ping 10.173.0.38
+
+ping 10.64.147.129
+ping 8.8.8.8    # Testa a conectividade sem depender de DNS
+ping google.com # Testa a conectividade e a resolução de DNS
+
+
+Resetting a Linux server password can be done through a few different methods, depending on your specific situation. Here’s a general approach for resetting the root password on most Linux distributions:
+
+1. **Reboot the System**: Restart your server and access the GRUB menu. You might need to press and hold the Shift key during boot-up to access this menu.
+
+2. **Edit GRUB Boot Options**: Once in the GRUB menu, select the default operating system and press `e` to edit the boot parameters.
+
+3. **Modify Boot Parameters**: Find the line that starts with `linux` and append `init=/bin/bash` at the end of this line. This will boot the system into a bash shell with root privileges.
+
+4. **Remount Filesystem**: After booting into the bash shell, remount the root filesystem in read/write mode with the command:
+   ```bash
+   mount -o remount,rw /
+   ```
+
+5. **Reset the Password**: Use the `passwd` command to reset the root password:
+   ```bash
+   passwd root
+   ```
+   Enter the new password twice when prompted.
+
+6. **Reboot the System**: Remount the filesystem in read-only mode and reboot the system:
+   ```bash
+   mount -o remount,ro /
+   reboot
+   ```
