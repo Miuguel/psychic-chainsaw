@@ -14,27 +14,59 @@ tar -xzvf easibox-deployer-v1.1.6-master-17.tar.gz
 cd easibox-deployer
 ./install.sh
 
+cftv@inwave.com.br
 
-ebfc5cee4d047f
+ASSAI - Freguesia:
+74-5D-22-EA-24-F7 eb745d22ea24f7
+FC-5C-EE-4D-04-7F ebfc5cee4d047f
 
-eb745d22ea24f7
+Rede Compras:
+FC-5C-EE-4D-03-44 ebfc5cee4d0344
+D8-CB-8A-D7-5F-B1 ebd8cb8ad75fb1
+FC-5C-EE-4D-03-42 ebfc5cee4d0342
+74-5D-22-EA-2E-C0 eb745d22ea2ec0
 
-74-5D-22-EA-24-F7
-FC-5C-EE-4D-04-7F
+AP - Caete
+74-5D-22-EA-2F-14 eb745d22ea2f14
 
-eb60c7270ed72e
+Celeiro - Chapeco:
+60-C7-27-0E-D7-22 eb60c7270ed722
+D8-CB-8A-D7-5D-B8 ebd8cb8ad75db8
+
+Savegnago - Barretos
+74-5D-22-EA-2D-B1 eb745d22ea2db1
+
+Savegnago - Ribeirao Preto
+FC-5C-EE-4D-D8-32 ebfc5cee4dd832
+FC-5C-EE-4D-04-85 ebfc5cee4d0485
+
+Savegnago - Araraquara
+FC-5C-EE-4D-05-76 ebfc5cee4d0576
+FC-5C-EE-4D-05-CF ebfc5cee4d05cf
+
+Savegnago - Franca
+74-5D-22-EA-2E-C9 eb745d22ea2ec9
+
+FC-5C-EE-4D-0C-50 ebfc5cee4d0c50
+
+16271 - SUPER VIZA - PATO BRANCO
+FC-5C-EE-4D-05-CF ebfc5cee4d05cf
+
+16206 - ULTRA BOX - SANTA MARIA - DF
+FC-5C-EE-4D-04-91 ebfc5cee4d0491
+
+ANDREAZZA - LOJA 14 - PIONEIRO
+FC-5C-EE-4D-03-D1 ebfc5cee4d03d1
+
+ANDREAZZA - LOJA 31 - BELA VISTA
+60-C7-27-03-DF-0B eb60c72703df0b
+
+FC-5C-EE-4D-04-90 ebfc5cee4d0490
 
 
-ebd8cb8ad75ee3
+5022 
 
-10.255.135.198
-
-
-eb60c7270ed72e
-
-ebfc5cee4d047f
-
-eb745d22ea24f7
+eb00e04c3884d9
 
 ebd8cb8ad75ee3
 
@@ -55,18 +87,23 @@ Protocolo EasiCash servidor (continuação):
 	Certificado KEY
 	Certificado Remote
 - Licensa
-- adicionar dvr
 - Start full build instalation
+- adicionar dvr
 - Modificar IP, mask, gateway, DNS
 - Evidencias:
-	DNS 
-	TCP 
+	DVR;
 	IP 
-	Imagem da camera (com horário)
+	Video
+	Imagem da camera (com horário) easilive
 	HD funcionando
 
+	servidor;
+	IP config
+	DVR config
+	opcional;
+	testes
+
 Configuração do DVR
-PDV 00
 Stream Principal
 Tipo de vídeo: Vídeo e Áudio
 Resolução: 1280x720 (720P)
@@ -98,19 +135,79 @@ Filtro ruído: OFF (Desativado)
 Eventos
 Desabilitar todas as opçãos e Remover Tudo.
 
+NTP - Ativar
+IP do servidor
+porta 123
+1 minuto
+
+# config padrão servidor:
+CR_OVERLAY_ENABLED = 0         # Turn on stream overlay integration
+MAX_UPLOAD_SPEED = 20          # Maximum video upload speed in Mbps
+VIDEO_AND_AUDIO = 1            # Enable camera audio capturing integration
+FIX_SOCCIN = 0                 # Fixes operator and string decode on TopSistemas SOCCIN integration
+FIX_TOPSISTEMAS_OPERATOR = 0   # Fixes operator on TopSistemas integration
+FIX_TOPSISTEMAS_ENCODE = 0     # Fixes string decode on TopSistemas integration
+
+# IP padrão
 192.168.1.1
 255.255.255.0
 8.8.8.8
 8.8.4.4
-10.0.028.60 10.0.28.60
-10.0.28.64
-10.0.28.60
-10.0.28.91
+
+ping 172.19.0.4
+
+172.19.0.4
+172.19.0.2
+
+*erro esquisito que apareceu uma vez, foi temporario, depois de um tempo ele sumiu*
+Failed to get info. Skipping step
+{"code":2,"message":"Invalid box - not cash"}
 
 A mascara de subnet divide a rede em duas, de forma que uma parte só tem acesso a outra se for por meio de um roteador.
-Aparentemente só se pode acessar o DVR se a mascara de subnet estiver igual, eu me pergunto se isso tambem tem a ver com o servidor
+Só se pode acessar um dispositivo na rede se eles estiverem na mesma divisao da mascara de subnet
+
+*Failed to install APT: "docker-ce"*
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+
+"Error response from daemon: container 081a000d294af7e11ce175f0061b2c551cccc62a0e0c208088aedef1ceaab0b1 is not running
+Failed to initialize MongoDB database":
+sudo docker ps -a
+sudo docker restart <container id>
+sudo docker pull mongo:latest
+exemplo:
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS
+          PORTS       NAMES
+d9ee4c135751   mongo:4   "docker-entrypoint.s…"   14 minutes ago   Up 14 minutes
+   27017/tcp   mongo_mongo.1.xqyqu8nlh7vb7qoqe5s43wcb0
+sudo docker restart d9ee4c135751
+sudo docker pull mongo:latest
+sudo docker restart b6dabf0042dc
+
+As vezes, a configuração de DNS do servidor estarão em um canal inacessivel, se pode testar esse fator usando:
+ping DNS
+Como por exemplo:
+ping 8.8.8.8    # Testa a conectividade sem depender de DNS
+ping google.com # Testa a conectividade e a resolução de DNS
+Se a conectividade com o DNS não estiver disponivel ainda, se pode usar de um artificio, para criar um acesso DHCP temporario na maquina:
+sudo dhclient eno1
+Se necessario excluir manualmente (embora isso seja realizado automaticamente ao dar reboot na maquina):
+sudo dhclient -r eno1
+Com esse comando é possivel ver as rotas de acesso do servidor:
+ip route show
+
+
+
 Sempre divide a quantidade de cameras totais pelo dvr dos pedidos e o resto fica para os ultimos dvr
 mudar os dvr
+
+
 
 sudo ifconfig eth0 10.1.13.140 netmask 255.255.255.0
 
@@ -130,17 +227,12 @@ sudo ip addr flush dev eno1
 sudo nano /etc/network/interfaces
 
 ip route show
-sudo dhclient eno1
+sudo dhclient eno1 #resolve problema de conectividade causado por DNS sem acesso
 
 sudo dhclient -r eno1
 sudo dhclient eno1
 
-ping 10.173.0.37
-ping 10.173.0.38
-
 ping 10.64.147.129
-ping 8.8.8.8    # Testa a conectividade sem depender de DNS
-ping google.com # Testa a conectividade e a resolução de DNS
 
 
 Resetting a Linux server password can be done through a few different methods, depending on your specific situation. Here’s a general approach for resetting the root password on most Linux distributions:
@@ -167,3 +259,11 @@ Resetting a Linux server password can be done through a few different methods, d
    mount -o remount,ro /
    reboot
    ```
+
+sudo docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS
+          PORTS       NAMES
+d9ee4c135751   mongo:4   "docker-entrypoint.s…"   14 minutes ago   Up 14 minutes
+   27017/tcp   mongo_mongo.1.xqyqu8nlh7vb7qoqe5s43wcb0
+sudo docker restart d9ee4c135751
+sudo docker pull mongo:latest

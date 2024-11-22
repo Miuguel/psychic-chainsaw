@@ -5,7 +5,7 @@
     SendEvent, {Text}admin ; 
     return
 ^!e:: ; Este é o atalho para Ctrl + Alt + E
-    SendRaw, ebd8cb8ad75fb1 ;
+    SendRaw, ebfc5cee4d03d1 ;
     return
 contador := 1
 
