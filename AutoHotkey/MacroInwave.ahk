@@ -1,11 +1,11 @@
 ^!i:: ; Este é o atalho para Ctrl + Alt + I
-    Send, {Text}Inwave3725 ;
+    Send, {Text}password ;
     return
 ^!a:: ; Este é o atalho para Ctrl + Alt + A
-    SendEvent, {Text}admin ; 
+    SendEvent, {Text}user ; 
     return
 ^!e:: ; Este é o atalho para Ctrl + Alt + E
-    SendRaw, ebfc5cee4d03d1 ;
+    SendRaw, serverPassword ;
     return
 contador := 1
 
